@@ -1,4 +1,4 @@
-FROM golang:alpine as builder
+FROM golang:1.9-alpine as builder
 
 RUN apk add --update go git make gcc musl-dev linux-headers ca-certificates
 RUN  git clone --depth 1 --branch release/1.8 https://github.com/ethereum/go-ethereum
